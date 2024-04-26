@@ -15,8 +15,14 @@ use function file_exists;
 
 final class SynchronizerTest extends TestCase
 {
-    private Mutex $mutex;
-    private Synchronizer $synchronizer;
+    /**
+     * @var \Yiisoft\Mutex\Tests\Mocks\Mutex
+     */
+    private $mutex;
+    /**
+     * @var \Yiisoft\Mutex\Synchronizer
+     */
+    private $synchronizer;
 
     protected function setUp(): void
     {

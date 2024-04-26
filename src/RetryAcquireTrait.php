@@ -16,8 +16,9 @@ trait RetryAcquireTrait
 {
     /**
      * @psalm-var positive-int
+     * @var int
      */
-    private int $retryDelay = 50;
+    private $retryDelay = 50;
 
     /**
      * Returns a new instance with the specified retry delay.

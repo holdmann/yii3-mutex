@@ -25,7 +25,10 @@ use function set_error_handler;
  */
 final class Synchronizer
 {
-    private MutexFactoryInterface $mutexFactory;
+    /**
+     * @var \Yiisoft\Mutex\MutexFactoryInterface
+     */
+    private $mutexFactory;
 
     public function __construct(MutexFactoryInterface $mutexFactory)
     {

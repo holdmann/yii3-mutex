@@ -17,13 +17,19 @@ abstract class Mutex implements MutexInterface
 {
     use RetryAcquireTrait;
 
-    private string $lockName;
-    private string $mutexName;
+    /**
+     * @var string
+     */
+    private $lockName;
+    /**
+     * @var string
+     */
+    private $mutexName;
 
     /**
      * @var array<string, true>
      */
-    private static array $currentProcessLocks = [];
+    private static $currentProcessLocks = [];
 
     public function __construct(string $driverName, string $mutexName)
     {

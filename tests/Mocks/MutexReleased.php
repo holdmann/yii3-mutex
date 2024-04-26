@@ -9,7 +9,10 @@ use Yiisoft\Mutex\MutexInterface;
 
 final class MutexReleased implements MutexInterface
 {
-    private ?string $name;
+    /**
+     * @var string|null
+     */
+    private $name;
 
     public function __construct(string $name)
     {

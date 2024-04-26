@@ -11,8 +11,14 @@ final class RetryAcquireTraitMutex implements MutexInterface
 {
     use RetryAcquireTrait;
 
-    private int $expectedAttempts;
-    private int $attemptsCounter = 0;
+    /**
+     * @var int
+     */
+    private $expectedAttempts;
+    /**
+     * @var int
+     */
+    private $attemptsCounter = 0;
 
     public function __construct(int $expectedAttempts)
     {

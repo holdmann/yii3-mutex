@@ -23,12 +23,15 @@ namespace Yiisoft\Mutex;
  */
 final class SimpleMutex
 {
-    private MutexFactoryInterface $mutexFactory;
+    /**
+     * @var \Yiisoft\Mutex\MutexFactoryInterface
+     */
+    private $mutexFactory;
 
     /**
      * @var MutexInterface[]
      */
-    private array $acquired = [];
+    private $acquired = [];
 
     public function __construct(MutexFactoryInterface $mutexFactory)
     {

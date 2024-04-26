@@ -15,7 +15,10 @@ use function unlink;
 
 final class Mutex extends \Yiisoft\Mutex\Mutex
 {
-    private string $file;
+    /**
+     * @var string
+     */
+    private $file;
 
     /**
      * @var resource
